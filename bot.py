@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+roleChannel = None
 
 intents = Intents.all()
 client = commands.Bot(command_prefix='!',intents=intents)
@@ -31,6 +32,7 @@ async def on_ready():
         await roleChannel.send(
             """**Come get your roles, folks!**\n
             Class Roles:\n
+            `
             """
         )
     print(", ".join([str(str(r.name) + ", " + str(r.id)) for r in guild.roles]))
@@ -53,6 +55,9 @@ async def on_ready():
 #    if profanity.contains_profanity(message.content):
 #        await message.channel.send("WOAH! That's some strong language which does not have a place on this server (in accordance to rule 3). Please rephrase your sentence in a nicer way.")
 #        await message.channel.send("I am a bot, and I sometimes make mistakes. If you think that what you said was appropriate and/or have questions, please DM @jaragan.")
+@client.event
+async def on_raw_reaction_add(ctx):
+    if ctx.roleC
 
 
 client.run(TOKEN)
