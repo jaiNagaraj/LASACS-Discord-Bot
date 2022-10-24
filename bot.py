@@ -57,6 +57,22 @@ async def on_ready():
             `Raptor DataWorks` react with 📜\n
             """
         )
+        rolMsg.add_reaction('🤓')
+        rolMsg.add_reaction('🤠')
+        rolMsg.add_reaction('😎')
+        rolMsg.add_reaction('🧐')
+        rolMsg.add_reaction('👶')
+        rolMsg.add_reaction('😊')
+        rolMsg.add_reaction('🤑')
+        rolMsg.add_reaction('👴')
+        rolMsg.add_reaction('📱')
+        rolMsg.add_reaction('💽')
+        rolMsg.add_reaction('🔍')
+        rolMsg.add_reaction('🦸‍♂️')
+        rolMsg.add_reaction('🤵')
+        rolMsg.add_reaction('🛑')
+        rolMsg.add_reaction('👩‍💻')
+        rolMsg.add_reaction('📜')
     print(", ".join([str(str(r.name) + ", " + str(r.id)) for r in guild.roles]))
 
 #greet newcomers
@@ -81,8 +97,71 @@ async def on_ready():
 async def on_raw_reaction_add(ctx):
     guild = client.get_guild(GUILD)
     roleChannel = discord.utils.get(guild.channels, name="get-roles",type="ChannelType.text")
-    if ctx.channel_id != roleChannel:
+    if ctx.channel_id != roleChannel or ctx.user_id == client.id:
         return
-    if ctx.emoji == ''
+    if ctx.emoji == '🤓':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🤠':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '😎':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🧐':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '👶':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '😊':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🤑':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '👴':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '📱':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '💽':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🔍':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🦸‍♂️':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🤵':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '🛑':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '👩‍💻':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
+    elif ctx.emoji == '📜':
+        roleToAdd = discord.utils.get(guild.roles,id=00000000000)
+        currMember = client.get_user(ctx.user_id)
+        currMember.add_roles(roleToAdd)
 
 client.run(TOKEN)
