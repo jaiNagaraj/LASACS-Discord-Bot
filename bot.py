@@ -187,4 +187,88 @@ async def on_raw_reaction_add(ctx):
         currMember = guild.get_member(ctx.user_id)
         await currMember.add_roles(roleToAdd)
 
+@client.event
+async def on_raw_reaction_remove(ctx):
+    guild = client.get_guild(int(GUILD))
+    myMoji = (ctx.emoji.name)
+    msg = await guild.get_channel(ctx.channel_id).fetch_message(ctx.message_id)
+    if not (roleChannel is None):
+        myRoleChannel = roleChannel
+    else:
+        myRoleChannel = newRoleChannel
+    if ctx.channel_id != myRoleChannel.id or guild.get_member(ctx.user_id).name == 'Jaragan Test Bot':
+        return
+    if myMoji == '🤓':
+        roleToAdd = discord.utils.get(guild.roles,id=947698094877868072)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🤠':
+        roleToAdd = discord.utils.get(guild.roles,id=947697781252952076)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '😎':
+        roleToAdd = discord.utils.get(guild.roles,id=947697823950962689)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🧐':
+        roleToAdd = discord.utils.get(guild.roles,id=947697850383478864)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🧓':
+        roleToAdd = discord.utils.get(guild.roles,id=947697898253090856)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '👶':
+        roleToAdd = discord.utils.get(guild.roles,id=807088268423856148)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '😊':
+        roleToAdd = discord.utils.get(guild.roles,id=807089136635871252)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🤑':
+        roleToAdd = discord.utils.get(guild.roles,id=803712717692207104)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '💪':
+        roleToAdd = discord.utils.get(guild.roles,id=807088371729825832)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '📱':
+        roleToAdd = discord.utils.get(guild.roles,id=807088201238970388)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '💽':
+        roleToAdd = discord.utils.get(guild.roles,id=803721581544865854)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🔍':
+        roleToAdd = discord.utils.get(guild.roles,id=804783485221994527)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🦸‍♂️':
+        roleToAdd = discord.utils.get(guild.roles,id=803713243213594635)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🤵':
+        roleToAdd = discord.utils.get(guild.roles,id=803721615958474752)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '🛑':
+        roleToAdd = discord.utils.get(guild.roles,id=803712882071175169)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '👩‍💻':
+        roleToAdd = discord.utils.get(guild.roles,id=803712678043975720)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '📜':
+        roleToAdd = discord.utils.get(guild.roles,id=1014706106393710633)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+    elif myMoji == '✊':
+        roleToAdd = discord.utils.get(guild.roles,id=947652632762282085)
+        currMember = guild.get_member(ctx.user_id)
+        await currMember.remove_roles(roleToAdd)
+
 client.run(TOKEN)
