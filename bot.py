@@ -112,7 +112,7 @@ async def on_raw_reaction_add(ctx):
         myRoleChannel = roleChannel
     else:
         myRoleChannel = newRoleChannel
-    if ctx.channel_id != myRoleChannel.id or guild.get_member(ctx.user_id).name == 'Jaragan Test Bot': # CORRECT THIS NAME, MIGHT BE DIFFERENT
+    if ctx.channel_id != myRoleChannel.id or guild.get_member(ctx.user_id).name == 'LASACS Bot':
         return
     if myMoji == '🤓':
         roleToAdd = discord.utils.get(guild.roles,id=947698094877868072)
@@ -196,7 +196,7 @@ async def on_raw_reaction_remove(ctx):
         myRoleChannel = roleChannel
     else:
         myRoleChannel = newRoleChannel
-    if ctx.channel_id != myRoleChannel.id or guild.get_member(ctx.user_id).name == 'Jaragan Test Bot':
+    if ctx.channel_id != myRoleChannel.id or guild.get_member(ctx.user_id).name == 'LASACS Bot':
         return
     if myMoji == '🤓':
         roleToAdd = discord.utils.get(guild.roles,id=947698094877868072)
